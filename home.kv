@@ -1,0 +1,57 @@
+MainWidget:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: .75, 1
+        InputField:
+            id: input_field # Identificador del widget
+            size_hint: 1, .15
+        KeyBoard:
+            size_hint: 1, 1
+    BoxLayout:
+        size_hint: .25, 1
+        orientation: 'vertical'
+        CameraField:
+            size_hint: 1, .4
+        PredictedTextField:
+            size_hint: 1, .6
+
+<KeyBoard>:
+    orientation: 'vertical'
+
+<CameraField>:
+
+
+<PredictedTextField>:
+    cols: 2
+    rows: 6
+    Button:
+        text: "hola"
+        on_release: app.root.ids.input_field.update_text(self.text) # Acción al soltar el botón: actualiza el texto del campo de entrada con el texto del botón
+    Button:
+        text: "hola2"
+        on_release: app.root.ids.input_field.update_text(self.text) # Acción al soltar el botón: actualiza el texto del campo de entrada con el texto del botón
+    Button:
+        text: "hola3"
+        on_release: app.root.ids.input_field.update_text(self.text) # Acción al soltar el botón: actualiza el texto del campo de entrada con el texto del botón
+    Button:
+        text: "hola4"
+        on_release: app.root.ids.input_field.update_text(self.text) # Acción al soltar el botón: actualiza el texto del campo de entrada con el texto del botón
+    Button:
+        text: "hola5"
+        on_release: app.root.ids.input_field.update_text(self.text) # Acción al soltar el botón: actualiza el texto del campo de entrada con el texto del botón
+    Button:
+        text: "hola6"
+        on_release: app.root.ids.input_field.update_text(self.text) # Acción al soltar el botón: actualiza el texto del campo de entrada con el texto del botón
+
+<InputField>:
+    rows: 1
+    size_hint: 1, 1
+    spacing: "2dp"
+    padding: "2dp"
+    TextInput:
+        id: my_text_input
+        size_hint: 0.8, 1
+    Button:
+        text: "Execute"
+        size_hint: 0.2, 1
+        on_release: root.clear_input_text()
